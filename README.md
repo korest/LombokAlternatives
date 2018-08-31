@@ -1,0 +1,1 @@
+Simple project that shows how similar functionality could be done using different libraries: Lombok, Immutables and AutoValue
