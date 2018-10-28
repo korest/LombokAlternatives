@@ -31,8 +31,9 @@ public class ImmutablesTest {
     @Test
     public void whenUserModifiedThenNewUserIsCreated() {
         final ImmutableUser user = createUser();
-        final User modifiedUser = ImmutableUser.copyOf(user)
-                .withName("Modified User");
+        final User modifiedUser = ImmutableUser.builder().from(user)
+                .name("Modified User")
+                .build();
 
         assertNotSame(user, modifiedUser);
         assertNotEquals(user.getName(), modifiedUser.getName());
